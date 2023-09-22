@@ -8,8 +8,6 @@ A general structure for a machine learning algorithm: <br>
 **Evaluation** - Using an evaluation function, this step consists of ranking the effetiveness of an algorithm. It's used in oriented trainings, so you know how well your learner treated the data and how you need to adjust it. Accuracy and squared error are some metrics.<br>
 **Optimization** - That's where you find the best learner and research/apply modifications to improve it. Greedy search and gradient descent are some techniques.
 
-Reference: <https://www.freecodecamp.org/news/machine-learning-principles-explained/#:~:text=The%20three%20components%20that%20make,to%20look%20at%20your%20data.>.
-
 **Training and test sets:** to avoid creating a bias in the pattern recognition, it's important to have a separate set of data for tests. If we test our machines with the same (or part of) the training data, we risk it struggling with different patterns of data in real applications.
 
 **Overfitting:** when your evaluation function is too 'fit' for your training set. In this case, the accuracy ratings become redundant.
