@@ -1,4 +1,5 @@
 ## Machine Learning Annotations
+Luan Alecxander Krzyzaniak - 2023
 
 Applications of machine learning include (but are not limited to) problems that bypass human capability or demand an unhuman amount of work to build or mantain. Of course, it doensn't mean that we can't apply machine learning to more basic problems. Machine learning is a useful tool.
 
@@ -18,3 +19,9 @@ Reference: <https://www.freecodecamp.org/news/machine-learning-principles-explai
 ### Questions
 
 *EVALUATION STEP: how does this apply to unoriented training?*
+
+### References
+
+C. Müller, Andreas; Guido, Sarah. Introduction to Machine Learning with Python: a guide for data scientists. First edition. USA: O'Reilly, 2017.
+
+FreeCodeCamp. Machine Learning Principles Explained. Febuary 1st, 2020. Available at: <https://www.freecodecamp.org/news/machine-learning-principles-explained/#:~:text=The%20three%20components%20that%20make,to%20look%20at%20your%20data.>. Access in 22nd of September, 2023.
