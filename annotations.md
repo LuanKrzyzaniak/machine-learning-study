@@ -10,18 +10,17 @@ A general structure for a machine learning algorithm: <br>
 **Evaluation** - Using an evaluation function, this step consists of ranking the effetiveness of an algorithm. It's used in oriented trainings, so you know how well your learner treated the data and how you need to adjust it. Accuracy and squared error are some metrics.<br>
 **Optimization** - That's where you find the best learner and research/apply modifications to improve it. Greedy search and gradient descent are some techniques.
 
-**Training and test sets:** to avoid creating a bias in the pattern recognition, it's important to have a separate set of data for tests. If we test our machines with the same (or part of) the training data, we risk it struggling with different patterns of data in real applications.
+**Training and test sets:** to avoid creating a bias in the pattern recognition, it's important to have a separate set of data for tests. If we test our machines with the same (or part of the) training data, we risk it struggling with different patterns of data in real applications.
 
 **Overfitting:** when your model cannot properly generalize, and become too accustomed to the training dataset. In this case, the accuracy ratings become imprecise, as the model fails when presented with new data.<br>
-It can happen when your dataset is too small, has a lot of noisy data (irrelevant data), trains for too long with the same dataset, or the model is so complex that the model learn the noisy data.
-**Underfitting:**
+It can happen when your dataset is too small, has a lot of noisy data (irrelevant data), trains for too long with the same dataset, or the model is so complex that the model learn the noisy data. <br>
+**Underfitting:** Every model that cannot properly identify what it's supposed to is classified as underfitting.
 
 **Oriented training:** we provide data and expected results to the machine. In this type of training, data quality becomes of upmost importance, given that the performance of the pattern recognition depends on it.
 
 ### Questions
 
 *EVALUATION STEP: how does this apply to unoriented training?*
-*OVERFITTING: i dont think i quite got it.*
 
 ### References
 
