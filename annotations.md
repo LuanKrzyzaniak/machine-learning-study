@@ -5,12 +5,17 @@ Applications of machine learning include problems where the decision logic bypas
 Some of these problems include face, handwriting or even medical conditions recognition. In these cases, it's difficult for the human mind to identify clear rules or patterns and manually translate them to a algorithm, and that's where machine learning comes in hand. <br>
 Of course, it doensn't mean that we can't apply machine learning to more basic problems.
 
-#### ✏️ General concepts - introduction slides
+#### ✏️ General concepts
 
-A general structure for a machine learning algorithm: <br>
-**Representation** - this step is where you build your T dataset. Here, you'll decide how to see and organize your data. You can organize it individualy, or in tables, for example. <br>
-**Evaluation** - Using an evaluation function, this step consists of ranking the effetiveness of an algorithm. It's used in oriented trainings, so you know how well your learner treated the data and how you need to adjust it. Accuracy and squared error are some metrics.<br>
-**Optimization** - That's where you find the best learner and research/apply modifications to improve it. Greedy search and gradient descent are some techniques.
+**General roadmap for model building**
+|ID|Passo|Descrição|
+---|---|---|
+|1|Dataset|Identify data, study the set, decide on the project bases (oriented/unoriented)|
+|2|Pre-processing|Data treatment: remove incomplete or incorrect data, colect statistics, plotting, building relationship tables, normalize data (apply scale)|
+|3|Split the data|Prepare training and testing sets|
+|4|Choose the algorithm|Define the algorithm (regression or classification) and its hiperparameters|
+|5|Test the model|Apply the test set and collect avaliation metrics|
+|6|Fix the model|In case of bad performance, we can revisit the hiperparameters, change algorithms or revise our data, identifying bad parameters and experimenting with new ones|
 
 **Training and test sets:** to avoid creating a bias in the pattern recognition, it's important to have a separate set of data for tests. If we test our machines with the same (or part of the) training data, we risk it struggling with different patterns of data in real applications
 
@@ -20,12 +25,15 @@ A general structure for a machine learning algorithm: <br>
 **Oriented training:** we provide data and expected results to the machine. In this type of training, data quality becomes of upmost importance, given that the performance of the pattern recognition depends on it. <br>
 **Unoriented training:** it's used when we cannot determine an expected output, either because we don't know its contents or size. An example include grouping social media users by their media consumption: in this case, we don't know what media categories we're dealing with, so we cannot provide a precise output.
 
+**Regression algorithms:** deals with continuous results, like predicting temperatures or guessing a person's height. <br>
+**Classification algorithms:** deals with a specified classification, like classifying a temperature as 'hot' or 'cold' or  even a person as 'short' or 'tall'.
+
 #### 📘 Introduction for machine learning with python
 
 **Why Python?** Python is a general-use language that's easy to use and include a variety of useful features and libraries. It has support for object-oriented programming, web applications and GUI design, as well as various libraries for data treatment that allow us to model over any type of data, be it image, text, or value. Also, Python supports some script languages, which allow us to quickly interact with our code via terminal or other tools. <br>
 
 **scikit-learn** is the most used Python library for machine learning. User guide: <https://scikit-learn.org/stable/user_guide.html> <br>
-Install it via **ANACONDA**, a prepackage that includes numPy, SciPy, matplotlib, pandas, IPython, Jupyter Notebook, and scikit-learn, or via **PIP** $ pip install numpy scipy matplotlib ipython scikit-learn pandas (jupyter separately)
+Install it via **ANACONDA**, a prepackage that includes numPy, SciPy, matplotlib, pandas, IPython, Jupyter Notebook, and scikit-learn, or via **PIP** $ pip install numpy scipy matplotlib ipython scikit-learn pandas
 
 #### ❔ Questions
 
