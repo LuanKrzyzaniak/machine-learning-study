@@ -6,3 +6,5 @@ import scipy as sp
 import IPython
 import mglearn
 import sklearn
+
+# pip install numpy matplotlib pandas scipy IPython mglearn sklearn
