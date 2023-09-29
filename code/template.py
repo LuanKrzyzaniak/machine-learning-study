@@ -6,5 +6,6 @@ import scipy as sp
 import IPython
 import mglearn
 import sklearn
+import seaborn
 
-# pip install numpy matplotlib pandas scipy IPython mglearn sklearn
+# pip install numpy matplotlib pandas scipy IPython mglearn sklearn seaborn
