@@ -17,7 +17,7 @@ Of course, it doensn't mean that we can't apply machine learning to more basic p
 |5|Test the model|Apply the test set and collect avaliation metrics|
 |6|Fix the model|In case of bad performance, we can revisit the hiperparameters, change algorithms or revise our data, identifying bad parameters and experimenting with new ones|
 
-**Training and test sets:** to avoid creating a bias in the pattern recognition, it's important to have a separate set of data for tests. If we test our machines with the same (or part of the) training data, we risk it struggling with different patterns of data in real applications
+**Training and test sets:** to avoid creating a bias in the pattern recognition, it's important to have a separate set of data for tests. If we test our machines with the same (or part of the) training data, we risk it struggling with different patterns of data in real applications.
 
 **Overfitting:** when your model cannot properly generalize, and become too accustomed to the training dataset. In this case, the accuracy ratings become imprecise, as the model fails when presented with new data.This can happen when your dataset is too small, has a lot of noisy data (irrelevant data), trains for too long with the same dataset, or the model is so complex that the model learn the noisy data. <br>
 **Underfitting:** Every model that cannot properly identify what it's supposed to is classified as underfitting.
@@ -36,11 +36,24 @@ Of course, it doensn't mean that we can't apply machine learning to more basic p
 |3|Feature engineering|We can manipulate the existing data to extract more than the eye can see. This is based on hypotesis, since a good hypotesis dictates how are we going to manipulate the data.|
 |3.1|Feature transformation|Here, we normalize the data, applying methods like log, square root or inversing. This can help us visualize the data clearer, and can even deal with some outliers.|
 |3.2|Feature creation|Manipulate data according to your hypotesis to generate new types of data. They can correlate with each other, exclude the need of another or even complement existing attributes.|
-|3.3|Feature selection|Find the best attributes|
+|4|Feature selection|Find the best attributes and manipulate them. Use only the k-best attributes or prefer manipulate and relate them to each other.|
+|5|Algorithms|Choosing the ideal type of algorithm comes with knowledge and intuition. Each one is best suited for a type, treatmetn, quantity and quality of data. Refer to "types of algorithms".|
+|6|Algorithm Tuning|It's indispensable to manipulate and find the best algorithm's hyperparamethers for your data. This can lead to a big improvement.|
+|7|Ensemble Methods|You can merge the results of multiple weak algorithms to achieve a better result. Methods include bagging and boosting. **STUDY THIS**: <https://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/“>|
+|8|Cross validation|It's an important concept which prevents overfitting. We should always test the model on data samples we haven't trained it in. **STUDY THIS**: <https://www.analyticsvidhya.com/blog/2018/05/improve-model-performance-cross-validation-in-python-r/>|
+#### Types of algorithms
+
+**Select K-best** - An algorithm to select the best attributes. <https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html#sklearn.feature_selection.SelectKBest>
+
+**K-nearest-neighbors** - Fast, almost instantaneous. Best used when the classes are well separated. Although it is overshadowed by most of other algorithms.
+
+**SVM (Support Vector Machine)** - 
+
+**GradientBoosting** - 
 
 #### 📘 Introduction for machine learning with python
 
-**Why Python?** Python is a general-use language that's easy to use and include a variety of useful features and libraries. It has support for object-oriented programming, web applications and GUI design, as well as various libraries for data treatment that allow us to model over any type of data, be it image, text, or value. Also, Python supports some script languages, which allow us to quickly interact with our code via terminal or other tools. <br>
+**Why Python?** Python is a general-use language that's easy to use and include a variety of useful features and libraries. It has support for object-oriented programming, web applica tions and GUI design, as well as various libraries for data treatment that allow us to model over any type of data, be it image, text, or value. Also, Python supports some script languages, which allow us to quickly interact with our code via terminal or other tools. <br>
 
 **scikit-learn** is the most used Python library for machine learning. User guide: <https://scikit-learn.org/stable/user_guide.html> <br>
 Install it via **ANACONDA**, a prepackage that includes numPy, SciPy, matplotlib, pandas, IPython, Jupyter Notebook, and scikit-learn, or via **PIP** $ pip install numpy scipy matplotlib ipython scikit-learn pandas
@@ -50,6 +63,13 @@ Install it via **ANACONDA**, a prepackage that includes numPy, SciPy, matplotlib
 **FEATURE DISCRETIZATION** 
 *"Sometimes, creating bins of numeric data works well since it handles the outlier values also. Numeric data can be made discrete by grouping values into bins. This is known as data discretization."*
 **FEATURE SELECTION** - How do i proceed?
+<https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html#sklearn.feature_selection.SelectKBest>
+
+#### My best tries
+
+|Problem|Algorithm|Accuracy|
+-|-|-|
+|Titanic|K-Neighbors|7.6555|
 
 #### 🗒️ References
 
