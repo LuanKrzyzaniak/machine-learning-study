@@ -1,11 +1,11 @@
-## Machine Learning Annotations
+# Machine Learning Annotations
 Luan Alecxander Krzyzaniak
 
 Applications of machine learning include problems where the decision logic bypass human capability or demand too much work to manually build and mantain.
 Some of these problems include face, handwriting or even medical conditions recognition. In these cases, it's difficult for the human mind to identify clear rules or patterns and manually translate them to a algorithm, and that's where machine learning comes in hand. <br>
 Of course, it doensn't mean that we can't apply machine learning to more basic problems.
 
-#### ✏️ General concepts
+## ✏️ General concepts
 
 **General roadmap for model building**
 |ID|Step|Description|
@@ -41,37 +41,42 @@ Of course, it doensn't mean that we can't apply machine learning to more basic p
 |6|Algorithm Tuning|It's indispensable to manipulate and find the best algorithm's hyperparamethers for your data. This can lead to a big improvement.|
 |7|Ensemble Methods|You can merge the results of multiple weak algorithms to achieve a better result. Methods include bagging and boosting. **STUDY THIS**: <https://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/“>|
 |8|Cross validation|It's an important concept which prevents overfitting. We should always test the model on data samples we haven't trained it in. **STUDY THIS**: <https://www.analyticsvidhya.com/blog/2018/05/improve-model-performance-cross-validation-in-python-r/>|
-#### Types of algorithms
+## 💻 Types of algorithms
 
 **Select K-best** - An algorithm to select the best attributes. <https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html#sklearn.feature_selection.SelectKBest>
 
-**K-nearest-neighbors** - Fast, almost instantaneous. Best used when the classes are well separated. Although it is overshadowed by most of other algorithms.
+### K-nearest-neighbors
+ - Oriented algorithm.
+ - Fast, almost instantaneous. 
+ - Best used when the classes are well separated, although it is overshadowed by most of other algorithms.
 
-**SVM (Support Vector Machine)** - 
+### SVM (Support Vector Machine)
+- Oriented algorithm.
+- Focus on training and classifying the dataset.
+- Each item is plotted in an n-dimensional plane, and the algorithm find an hyperplan that best diferentiate the classes.
 
-**GradientBoosting** - 
 
-#### 📘 Introduction for machine learning with python
+### GradientBoosting
+
+
+## 📘 Introduction for machine learning with python
 
 **Why Python?** Python is a general-use language that's easy to use and include a variety of useful features and libraries. It has support for object-oriented programming, web applica tions and GUI design, as well as various libraries for data treatment that allow us to model over any type of data, be it image, text, or value. Also, Python supports some script languages, which allow us to quickly interact with our code via terminal or other tools. <br>
 
 **scikit-learn** is the most used Python library for machine learning. User guide: <https://scikit-learn.org/stable/user_guide.html> <br>
 Install it via **ANACONDA**, a prepackage that includes numPy, SciPy, matplotlib, pandas, IPython, Jupyter Notebook, and scikit-learn, or via **PIP** $ pip install numpy scipy matplotlib ipython scikit-learn pandas
 
-#### ❔ Questions
-
-**FEATURE DISCRETIZATION** 
-*"Sometimes, creating bins of numeric data works well since it handles the outlier values also. Numeric data can be made discrete by grouping values into bins. This is known as data discretization."*
-**FEATURE SELECTION** - How do i proceed?
-<https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html#sklearn.feature_selection.SelectKBest>
-
-#### My best tries
+## ⭐ My best tries
 
 |Problem|Algorithm|Accuracy|
 -|-|-|
 |Titanic|K-Neighbors|7.6555|
 
-#### 🗒️ References
+## ❔ Questions
+
+
+
+## 🗒️ References
 
 C. Müller, Andreas; Guido, Sarah. Introduction to Machine Learning with Python: a guide for data scientists. First edition. USA: O'Reilly, 2017.
 
