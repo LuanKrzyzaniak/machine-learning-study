@@ -48,6 +48,7 @@ Of course, it doensn't mean that we can't apply machine learning to more basic p
 
 ### K-nearest-neighbors
  - Oriented algorithm.
+ - Works by plotting the data and classifying it according to close and already plotted data.
  - Fast, almost instantaneous. 
  - Best used when the classes are well separated, although it is overshadowed by most of other algorithms.
 
@@ -55,7 +56,16 @@ Of course, it doensn't mean that we can't apply machine learning to more basic p
 - Oriented algorithm.
 - Focus on training and classifying the dataset.
 - Each item is plotted in an n-dimensional plane, and the algorithm find an hyperplan that best diferentiate the classes.
+- Padding - the distance to the closest item - should be maximized.
+- SVM is robust to outliers: in the case that separating perfectly the data is impossible due to outliers, the algorithm chooses to ignore them and build its hyperplan according to the rest.
+- Support vectors: the individual observation coordinates.
+- Kernel trick: SVM has nucleus functions that are useful for non-linear segregation. They're basically super complex data transformations that discover how to segregate the dataset according to our settings.
 
+|Pros|Cons|
+-|-|
+|Works well when the data is clearly separated|Bad performance with big datasets, as its training is time-consuming|
+|Good when the number of dimensions is bigger than the number of sets|Bad performance for noisy dataset|
+|Due to the support vectors, it's memory-efficient||
 
 ### GradientBoosting
 
@@ -81,8 +91,10 @@ Install it via **ANACONDA**, a prepackage that includes numPy, SciPy, matplotlib
 
 C. Müller, Andreas; Guido, Sarah. Introduction to Machine Learning with Python: a guide for data scientists. First edition. USA: O'Reilly, 2017.
 
-FreeCodeCamp. Machine Learning Principles Explained. Febuary 1st, 2020. Available at: <https://www.freecodecamp.org/news/machine-learning-principles-explained/#:~:text=The%20three%20components%20that%20make,to%20look%20at%20your%20data>. Access in September, 2023.
+FreeCodeCamp. Machine Learning Principles Explained. Febuary 1st, 2020. Available at: <https://www.freecodecamp.org/news/machine-learning-principles-explained/#:~:text=The%20three%20components%20that%20make,to%20look%20at%20your%20data>. Access in september, 2023.
 
-AWS Amazon. What is ovefitting? Available at: <https://aws.amazon.com/pt/what-is/overfitting/#:~:text=Overfitting%20is%20an%20undesirable%20machine,on%20a%20known%20data%20set>. Access in September, 2023.
+AWS Amazon. What is ovefitting? Available at: <https://aws.amazon.com/pt/what-is/overfitting/#:~:text=Overfitting%20is%20an%20undesirable%20machine,on%20a%20known%20data%20set>. Access in september, 2023.
 
-Analythics Vidhya. Available at: <https://www.analyticsvidhya.com/blog/2015/12/improve-machine-learning-results/>. Access in October, 2023.
+Analythics Vidhya. Available at: <https://www.analyticsvidhya.com/blog/2015/12/improve-machine-learning-results/>. Access in october, 2023.
+
+Addan, Diego. Support Vector Machine. 2019. Available at:<https://www.inf.ufpr.br/dagoncalves/IA07.pdf> Acess in october, 2023.
