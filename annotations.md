@@ -67,8 +67,10 @@ Of course, it doensn't mean that we can't apply machine learning to more basic p
 |Good when the number of dimensions is bigger than the number of sets|Bad performance for noisy dataset|
 |Due to the support vectors, it's memory-efficient||
 
-### GradientBoosting
+### Gradient Boosting
 
+- Boosting algorithms are a type of ensemble method where multiple models are created sequentially, each trying to correct the previous one. Ada and Gradient are the most common bosting algorithms.
+- Gradient Boosting improves the previous models according to the negative gradient of loss function according to the predictions. Each model tries to minimize it, adding its results to the ensemble until the specified criteria is met. That's an advantage when dealing with ouliers, as they have a weaker impact on the gradient.
 
 ## 📘 Introduction for machine learning with python
 
