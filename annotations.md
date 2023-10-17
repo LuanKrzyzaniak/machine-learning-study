@@ -87,7 +87,7 @@ Install it via **ANACONDA**, a prepackage that includes numPy, SciPy, matplotlib
 
 ## ❔ Questions
 
-
+Gradient: <https://developers.google.com/machine-learning/crash-course/reducing-loss/gradient-descent?hl=pt-br>
 
 ## 🗒️ References
 
