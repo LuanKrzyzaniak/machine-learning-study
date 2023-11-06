@@ -92,6 +92,8 @@ Install it via **ANACONDA**, a prepackage that includes numPy, SciPy, matplotlib
 Gradient: <https://developers.google.com/machine-learning/crash-course/reducing-loss/gradient-descent?hl=pt-br>
 Classification report - sklearn
 Grid Search CV
+getdummies - horizontal classification
+https://colab.research.google.com/drive/1-JObByRLB9fYo95-AepOF3XMlNYiMEje?usp=sharing
 
 ## 🗒️ References
 
