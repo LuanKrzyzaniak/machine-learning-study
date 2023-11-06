@@ -44,6 +44,8 @@ Of course, it doensn't mean that we can't apply machine learning to more basic p
 
 ## 💻 Types of algorithms
 
+**GridSearchCV** - an useful tool to find the best algorithm and its hyperparamethers for an individual dataset. **[STUDY THIS](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html)**
+
 **Select K-best** - An algorithm to select the best attributes. **[STUDY THIS](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html#sklearn.feature_selection.SelectKBest)**
 
 ### K-nearest-neighbors
@@ -88,6 +90,8 @@ Install it via **ANACONDA**, a prepackage that includes numPy, SciPy, matplotlib
 ## ❔ Questions
 
 Gradient: <https://developers.google.com/machine-learning/crash-course/reducing-loss/gradient-descent?hl=pt-br>
+Classification report - sklearn
+Grid Search CV
 
 ## 🗒️ References
 
