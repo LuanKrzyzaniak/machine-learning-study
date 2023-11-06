@@ -1,2 +1,2 @@
 # machine-learning-study
-Exercises and challenges done while studying machine learning.
+Exercises and annotations done while studying machine learning.
