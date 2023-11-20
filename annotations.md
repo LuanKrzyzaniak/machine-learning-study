@@ -42,6 +42,8 @@ Of course, it doensn't mean that we can't apply machine learning to more basic p
 |7|Ensemble Methods|You can merge the results of multiple weak algorithms to achieve a better result. Methods include bagging and boosting. **[STUDY THIS](https://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/)**
 |8|Cross validation|It's an important concept which prevents overfitting. We should always test the model on data samples we haven't trained it in. **[STUDY THIS](https://www.analyticsvidhya.com/blog/2018/05/improve-model-performance-cross-validation-in-python-r/)**
 
+[The 7 Steps for Machine Learning](https://www.youtube.com/watch?v=nKW8Ndu7Mjw) from Google Cloud Tech
+
 ## 💻 Types of algorithms
 
 **GridSearchCV** - an useful tool to find the best algorithm and its hyperparamethers for an individual dataset. **[STUDY THIS](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html)**
@@ -75,34 +77,102 @@ Of course, it doensn't mean that we can't apply machine learning to more basic p
 - Gradient Boosting improves the previous models according to the negative gradient of loss function according to the predictions. Each model tries to minimize it, adding its results to the ensemble until the specified criteria is met. That's an advantage when dealing with ouliers, as they have a weaker impact on the gradient.
 
 ## 📘 Introduction for machine learning with python
+### Chapter 1
 
 **Why Python?** Python is a general-use language that's easy to use and include a variety of useful features and libraries. It has support for object-oriented programming, web applica tions and GUI design, as well as various libraries for data treatment that allow us to model over any type of data, be it image, text, or value. Also, Python supports some script languages, which allow us to quickly interact with our code via terminal or other tools. <br>
 
 **scikit-learn** is the most used Python library for machine learning. User guide: <https://scikit-learn.org/stable/user_guide.html> <br>
 Install it via **ANACONDA**, a prepackage that includes numPy, SciPy, matplotlib, pandas, IPython, Jupyter Notebook, and scikit-learn, or via **PIP** $ pip install numpy scipy matplotlib ipython scikit-learn pandas
 
+## 🟥 Keras
+
+[Keras](https://keras.io) is an native API for [Tensorflow 2](https://www.tensorflow.org) which allows for quick building of neural networks. Keras has abstractions and building blocks that helps quickly building those networks, and is centered around the idea of layers and models.
+
+The main models are: <br>
+**Sequential:** The sequential model is the simplest one. It quickly implements layers to a neural network which all the data passes through.
+
+![Alt text](image-2.png)
+
+``` python
+model = tf.keras.Sequential()
+model.add(tf.keras.layers.Dense(30, activation=tf.nn.relu, input_shape(784,)))
+model.add(tf.keras.layers.Dense(20, activation=tf.nn.relu))
+model.add(tf.keras.layers.Dense(10, activation=tf.nn.softmax))
+model.compile( loss='categorical_crossentropy',  
+                optimizer='rms prop'
+                metrics=['accuracy'])
+model.summary()
+model.fit(train_features, train_labels, epochs=EPOCHS, batch_size=BATCH_SIZE)
+test_loss, test_acc = model.evaluate(test_features, test_labels)
+```
+*code credit to [Google Cloud Tech](https://www.youtube.com/watch?v=J6Ok8p463C4)*
+
+**Functional model:** this model is able to fork into branches and accepts multi inputs and outputs. It's useful for dealing with similar data that has to be treated differently.
+
+``` python
+img_inputs = keras.Input(shape=(32,32,3))
+dense = layers.Dense(64, activation="relu")
+x = dense(inputs)
+x = layers.Dense(64, activation="relu")
+(x) outputs = layers.Dense(10)(x)
+model = keras.Model(inputs=inputs,
+outputs=outputs,
+name ="mnist_model")
+```
+
+![Alt text](image-1.png)
+
+**Activation functions:**
+- relu: default activation function
+- softmax: categorical distribution function
+
+**One-hot encoding:** It's used in Keras to convert values to a matrix, turning each individual value in a column and assigning '1' to the value as index. It's an alternative to
+**label encoding**, which usually has poor performance.
+``` python
+set_labels = tf.keras.utils.to_categorical(set_labels)
+```
+![Alt text](image.png)
+
+**Converting a Keras model to a Tensorflow estimator**
+``` python
+tf_classifier = tf.keras.estimator.model_to_estimator(keras_model=model)
+```
+
+**Some tutorials:**<br>
+[Getting Started with TensorFlow.js](https://www.youtube.com/watch?v=WYvgP9LfvTg) from Google Cloud Tech <br>
+[Getting Started with Keras](https://www.youtube.com/watch?v=J6Ok8p463C4) from Google Cloud Tech<br>
+[Scaling up Keras with Estimators](https://www.youtube.com/watch?v=YCXFceVKHTk) from Google Cloud Tech <br>
+[Keras Tutorial For Begginers](https://www.youtube.com/watch?v=pWp3PhYI-OU) from Simplilearn
+
+
 ## ⭐ My best tries
 
 |Problem|Algorithm|Accuracy|
 -|-|-|
-|Titanic|K-Neighbors|7.6555|
+|[Titanic](https://www.kaggle.com/competitions/titanic)|K-Neighbors|7.765|
 
 ## ❔ Questions
 
 Gradient: <https://developers.google.com/machine-learning/crash-course/reducing-loss/gradient-descent?hl=pt-br>
+
 Classification report - sklearn
+
 Grid Search CV
+
 getdummies - horizontal classification
+
 https://colab.research.google.com/drive/1-JObByRLB9fYo95-AepOF3XMlNYiMEje?usp=sharing
 
 ## 🗒️ References
 
-C. Müller, Andreas; Guido, Sarah. Introduction to Machine Learning with Python: a guide for data scientists. First edition. USA: O'Reilly, 2017.
+C. Müller, Andreas; Guido, Sarah. **Introduction to Machine Learning with Python: a guide for data scientists**. First edition. USA: O'Reilly, 2017.
 
-FreeCodeCamp. Machine Learning Principles Explained. Febuary 1st, 2020. Available at: <https://www.freecodecamp.org/news/machine-learning-principles-explained/#:~:text=The%20three%20components%20that%20make,to%20look%20at%20your%20data>. Access in september, 2023.
+FreeCodeCamp. **Machine Learning Principles Explained**. Available at: <https://www.freecodecamp.org/news/machine-learning-principles-explained/#:~:text=The%20three%20components%20that%20make,to%20look%20at%20your%20data>
 
-AWS Amazon. What is ovefitting? Available at: <https://aws.amazon.com/pt/what-is/overfitting/#:~:text=Overfitting%20is%20an%20undesirable%20machine,on%20a%20known%20data%20set>. Access in september, 2023.
+AWS Amazon. **What is ovefitting?** Available at: <https://aws.amazon.com/pt/what-is/overfitting/#:~:text=Overfitting%20is%20an%20undesirable%20machine,on%20a%20known%20data%20set>
 
-Analythics Vidhya. Available at: <https://www.analyticsvidhya.com/blog/2015/12/improve-machine-learning-results/>. Access in october, 2023.
+Analythics Vidhya. **Improve machine learning results**. Available at: <https://www.analyticsvidhya.com/blog/2015/12/improve-machine-learning-results/>.
 
-Addan, Diego. Support Vector Machine. 2019. Available at:<https://www.inf.ufpr.br/dagoncalves/IA07.pdf> Acess in october, 2023.
+Addan, Diego. **Support Vector Machine**. Available at:<https://www.inf.ufpr.br/dagoncalves/IA07.pdf>
+
+Vaz, Arthur Lamblet. **One hot encoding, o que é?** Available at: <https://arthurlambletvaz.medium.com/one-hot-encoding-o-que-é-cd2e8d302ae0>
