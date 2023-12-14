@@ -99,7 +99,7 @@ model.add(tf.keras.layers.Dense(30, activation=tf.nn.relu, input_shape(784,)))
 model.add(tf.keras.layers.Dense(20, activation=tf.nn.relu))
 model.add(tf.keras.layers.Dense(10, activation=tf.nn.softmax))
 model.compile( loss='categorical_crossentropy',  
-                optimizer='rms prop'
+                optimizer='rms prop',
                 metrics=['accuracy'])
 model.summary()
 model.fit(train_features, train_labels, epochs=EPOCHS, batch_size=BATCH_SIZE)
@@ -122,9 +122,19 @@ name ="mnist_model")
 
 ![Alt text](image-1.png)
 
+**Layer types:**
+- Dense layers
+- Convolutional layers
+- Pooling layers
+- Recurrent layers
+- Normalization layers
+- etc.
+
+
 **Activation functions:**
 - relu: default activation function
 - softmax: categorical distribution function
+- etc.
 
 **One-hot encoding:** It's used in Keras to convert values to a matrix, turning each individual value in a column and assigning '1' to the value as index. It's an alternative to
 **label encoding**, which usually has poor performance.
